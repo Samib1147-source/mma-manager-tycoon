@@ -1,0 +1,17 @@
+{
+  "$schema": "https:/opencode.ai/config.json",
+  "mcp": {
+    "mcp-unity": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/souhilbenammour/MMA manager tycoon/Library/PackageCache/com.gamelovers.mcp-unity@d572dc88f1b9/Server~/build/index.js"
+      ],
+      "environment": {
+        "MCP_UNITY_SETTINGS_PATH": "/Users/souhilbenammour/MMA manager tycoon/ProjectSettings/McpUnitySettings.json",
+        "MCP_UNITY_AUTH_TOKEN_PATH": "/Users/souhilbenammour/MMA manager tycoon/Library/McpUnity/bridge-token"
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement name="screen" class="creation-shell cr-entering">
+    <ui:VisualElement class="cr-masthead">
+      <ui:VisualElement class="cr-brand"><ui:VisualElement name="career-emblem" class="cr-emblem"/><ui:Label text="MMA" class="cr-wordmark"/><ui:VisualElement class="cr-brand-rule"/><ui:Label text="CAREER MODE" class="cr-brand-subtitle"/></ui:VisualElement>
+      <ui:VisualElement class="cr-journey"><ui:Label text="01" class="cr-step-index cr-active"/><ui:Label text="Identity" class="cr-step-label cr-active"/><ui:VisualElement class="cr-step-line"/><ui:Label text="02" class="cr-step-index"/><ui:Label text="Origins" class="cr-step-label"/><ui:VisualElement class="cr-step-line"/><ui:Label text="03" class="cr-step-index"/><ui:Label text="Amateur" class="cr-step-label"/></ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement class="cr-content">
+      <ui:VisualElement name="portrait-panel" class="portrait-panel cr-stage">
+        <ui:VisualElement name="stage-art" class="cr-stage-art" picking-mode="Ignore"/>
+        <ui:VisualElement class="cr-stage-copy" picking-mode="Ignore"><ui:Label text="EVERY FIGHTER HAS A BEGINNING" class="cr-eyebrow"/><ui:Label text="YOUR&#10;LEGACY." class="cr-hero-title"/><ui:VisualElement class="cr-red-rule"/><ui:Label text="Starts with you." class="cr-stage-caption"/></ui:VisualElement>
+        <ui:Image name="fighter-preview" class="cr-fighter-image" picking-mode="Ignore"/>
+        <ui:VisualElement class="cr-live" picking-mode="Ignore"><ui:VisualElement class="cr-live-dot"/><ui:Label text="LIVE FIGHTER PREVIEW" class="cr-micro"/></ui:VisualElement>
+        <ui:VisualElement class="cr-fighter-identity" picking-mode="Ignore">
+          <ui:VisualElement class="cr-name-rule"/>
+          <ui:Label name="preview-nickname" text="Your story is unwritten" class="cr-fighter-nickname"/>
+          <ui:Label name="preview-name" text="YOUR FIGHTER" class="cr-fighter-name"/>
+          <ui:VisualElement class="cr-fighter-meta"><ui:Label name="preview-country" text="Nationality unselected" class="cr-fighter-country"/><ui:VisualElement class="cr-meta-dot"/><ui:Label text="AMATEUR PROSPECT" class="cr-prospect"/></ui:VisualElement>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="cr-editor form-panel">
+        <ui:VisualElement class="cr-editor-heading"><ui:Label text="FIGHTER IDENTITY" class="cr-eyebrow"/><ui:Label text="01" class="cr-editor-index"/></ui:VisualElement>
+        <ui:Label text="CREATE YOUR FIGHTER" class="cr-title"/>
+        <ui:Label text="A name to remember. A career to make your own." class="cr-description"/>
+        <ui:VisualElement class="cr-field-block">
+          <ui:VisualElement class="cr-label-row"><ui:Label text="Fighter name" class="cr-label"/><ui:Label text="Required" class="cr-optional"/></ui:VisualElement>
+          <ui:TextField name="fighter-name" max-length="32" class="cr-input" tooltip="Your fighter’s full name. Required, up to 32 characters."/>
+        </ui:VisualElement>
+        <ui:VisualElement class="cr-field-block">
+          <ui:VisualElement class="cr-label-row"><ui:Label text="Nickname" class="cr-label"/><ui:Label text="Optional" class="cr-optional"/></ui:VisualElement>
+          <ui:TextField name="nickname" max-length="24" class="cr-input" tooltip="An optional nickname, up to 24 characters."/>
+        </ui:VisualElement>
+        <ui:VisualElement class="cr-field-block">
+          <ui:VisualElement class="cr-label-row"><ui:Label text="Nationality" class="cr-label"/><ui:Label text="Required" class="cr-optional"/></ui:VisualElement>
+          <ui:Button name="nationality" class="cr-country-button" tooltip="Search and select a nationality."/>
+        </ui:VisualElement>
+        <ui:VisualElement class="cr-appearance">
+          <ui:VisualElement class="cr-label-row"><ui:Label text="Skin tone" class="cr-label"/><ui:Label name="tone-label" text="Medium" class="cr-tone-name"/></ui:VisualElement>
+          <ui:VisualElement name="skin-tones" class="cr-tones"/>
+          <ui:Label text="Your appearance updates in the live preview." class="cr-help"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="cr-editor-bottom">
+          <ui:VisualElement class="cr-status-row"><ui:VisualElement name="save-indicator" class="cr-save-indicator"/><ui:Label name="status" text="Make this fighter yours." class="cr-status"/></ui:VisualElement>
+          <ui:Button name="save-fighter" text="Save fighter" class="cr-secondary"/>
+          <ui:Label text="Next: shape your early life, one decision at a time." class="cr-next-note"/>
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement class="cr-footer"><ui:Label text="ONE FIGHTER. EVERY DECISION." class="cr-footer-tag"/><ui:Label text="Tab to navigate   ·   Enter to select" class="cr-keyboard-hint"/></ui:VisualElement>
+    <ui:VisualElement name="country-overlay" class="cr-overlay hidden">
+      <ui:VisualElement name="country-dialog" class="cr-country-dialog">
+        <ui:VisualElement class="cr-dialog-top"><ui:Label text="REPRESENT YOUR ROOTS" class="cr-eyebrow"/><ui:Button name="close-country" text="Close  ×" class="cr-close"/></ui:VisualElement>
+        <ui:Label text="CHOOSE NATIONALITY" class="cr-dialog-title"/>
+        <ui:Label text="Find the country your fighter will represent." class="cr-dialog-description"/>
+        <ui:TextField name="country-search" class="cr-input cr-search" tooltip="Search by country name or two-letter code."/>
+        <ui:ScrollView name="country-list" class="cr-country-list"/>
+        <ui:Label name="country-count" class="cr-country-count"/>
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

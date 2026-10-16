@@ -1,0 +1,10 @@
+/* Imported pixel faces also cover inputs and modal controls. */
+* { -unity-font-definition: url("../Fonts/PixelifySans-Regular.ttf"); }
+.brand-mark, .brand-word, .form-title, .portrait-title, .preview-name, .primary-button,
+.dialog-title, .life-logo, .life-title, .life-card-title, .life-age, .life-money,
+.life-fighter-name, .life-result-title, .life-primary {
+    -unity-font-definition: url("../Fonts/PixelifySans-Bold.ttf");
+    -unity-font-style: normal;
+}
+
+.career-return { border-radius: 0; border-width: 3px; border-top-color: #f6d697; border-left-color: #f6d697; border-bottom-color: #805737; border-right-color: #805737; font-size: 16px; }
